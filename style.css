@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+p {
+	margin: 1em auto;
+}
+body {
+	background-image: url(images/bg.jpg);
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-color: #458183;
+}
+#wrapper {
+	max-width: 960px;
+	width: 98%;
+	margin: 0 auto;
+	color: #fff;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times,
+		"Times New Roman", serif;
+}
+
+/*---- header: ----*/
+header {
+	position: relative; /* for absolute nav */
+}
+h1 {
+	text-align: center;
+	font-weight: normal;
+	padding: 0.5em;
+}
+nav {
+	position: absolute;
+	top: 4em;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+}
+nav span {
+	font-size: 1.5em;
+	cursor: pointer;
+}
+nav div {
+	flex: 1;
+	text-align: center;
+}
+nav ul {
+	list-style-type: none;
+	margin-top: 0.5em;
+	display: none;
+}
+nav li {
+	padding: 0.7em 0;
+	background: rgba(0, 0, 0, 0.7);
+	width: 50%;
+	margin: auto;
+}
+nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/*---- content: ----*/
+main {
+	margin-top: 3em;
+}
+#gallery {
+	display: grid;
+	align-items: center;
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+}
+#galleryPhoto {
+	grid-area: 1 / 1 / 2 / 2;
+	padding: 3px;
+	border: solid 1px #fff;
+	width: 100%;
+	height: auto;
+}
+#previous {
+	grid-area: 1 / 1 / 2 / 2;
+	margin-left: 2%;
+	transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	cursor: pointer;
+	display: none;
+}
+#next {
+	grid-area: 1 / 1 / 2 / 2;
+	justify-self: end;
+	margin-right: 2%;
+	cursor: pointer;
+}
+
+article {
+	margin: 1em;
+	line-height: 1.5em;
+}
+#moreButton {
+	cursor: pointer;
+	font-style: italic;
+	margin: auto 1em;
+}
+#moreInfo {
+	display: none;
+}
+
+/*---- footer: ----*/
+form {
+	border: solid 1px #fff;
+	margin: 1em auto;
+	padding: 1em;
+	text-align: center;
+}
+#message {
+	font-style: italic;
+}
+label,
+input {
+	margin-left: 1em;
+}
+.info {
+	width: 250px;
+}
+.button {
+	cursor: pointer;
+}
